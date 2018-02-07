@@ -38,7 +38,7 @@ with open('requires.txt') as f:
     required = f.read().splitlines()
 
 
-with codecs.open('README.txt', 'r', 'utf-8') as f:
+with codecs.open('README.rst', 'r', 'utf-8') as f:
     readme = f.read()
 
 
