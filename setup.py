@@ -15,11 +15,6 @@ except ImportError:
     from distutils.core import setup
 
 
-packages = [
-    'TEDT',
-]
-
-
 if sys.argv[-1] == 'publish':
     os.system('python3 setup.py sdist upload -r pypi')
     sys.exit()
@@ -47,15 +42,14 @@ setup(
     author='ZhenSheng Peng',
     author_email='pzsyjsgldd@163.com',
     url='https://github.com/pzs741/TEDT',
-    packages=packages,
-    include_package_data=True,
     install_requires=['jieba >= 0.35', 'numpy >= 1.7.1', 'networkx >= 1.9.1','requests >=2.14.2'],
     license='MIT',
-    zip_safe=False,
     classifiers=[
         'Programming Language :: Python :: 3',
         'Natural Language :: English',
         'Intended Audience :: Developers',
     ],
-    package_data={'TEDT':['*.txt',]},
+    packages=['TEDT'],
+    package_dir={'TEDT':'TEDT'},
+    package_data={'TEDT':['*.*',]}
 )
