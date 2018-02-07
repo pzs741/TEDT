@@ -34,9 +34,6 @@ if sys.version_info[0] == 2 and sys.argv[-1] not in ['publish', 'upload']:
              '`$ pip install TEDT` for python2')
 
 
-with open('requires.txt') as f:
-    required = f.read().splitlines()
-
 
 with codecs.open('README.rst', 'r', 'utf-8') as f:
     readme = f.read()
@@ -52,7 +49,7 @@ setup(
     url='https://github.com/pzs741/TEDT',
     packages=packages,
     include_package_data=True,
-    install_requires=required,
+    install_requires=['jieba >= 0.35', 'numpy >= 1.7.1', 'networkx >= 1.9.1'],
     license='MIT',
     zip_safe=False,
     classifiers=[
@@ -60,5 +57,4 @@ setup(
         'Natural Language :: English',
         'Intended Audience :: Developers',
     ],
-    package_data={'': ['requires.txt']},
 )
