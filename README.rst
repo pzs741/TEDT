@@ -46,33 +46,35 @@ TEDT：基于密度及文本特征的新闻标题抽取算法
 --------
 
     >>> from TEDT import TEDT
-    >>> urls = [
+    >>> url = 'http://www16.zzu.edu.cn/msgs/vmsgisapi.dll/onemsg?msgid=1712291126498126051'
+    >>> t = TEDT(url, LOG_LEVEL='INFO',)
+    >>> t.ie()
+    >>> print(t.corpus)
+    日前，日本驻华大使馆经济部一等秘书上田智一、日本科学技术振兴机构（jst）北京事务所所长茶山秀一、日本理化学研究所（riken）。。。
+    >>> print(t.title)
+    日本科技代表团来校访问交流（图）
+	>>> print(t.time)
+    2017-12-29
+
+3. 实例测试
+--------
+- from TEDT import TEDT
+
+- urls = [
     'http://www.cankaoxiaoxi.com/china/20170630/2158196.shtml',  # 参考消息
     'http://news.ifeng.com/a/20180121/55332303_0.shtml',  # 凤凰资讯
     'http://china.huanqiu.com/article/2018-01/11541273.html',  # 环球网
     'http://news.china.com/socialgd/10000169/20180122/31990621.html',  # 中华网
     'http://www.thepaper.cn/newsDetail_forward_1962275',  # 澎湃新闻
-    'http://news.szu.edu.cn/info/1003/4989.htm',  # 深圳大学新闻网
+    # 'http://news.szu.edu.cn/info/1003/4989.htm',  # 深圳大学新闻网
     'http://www16.zzu.edu.cn/msgs/vmsgisapi.dll/onemsg?msgid=1712291126498126051',  # 郑州大学新闻网
     'http://news.ruc.edu.cn/archives/194824',  # 人民大学新闻网
     'http://xinwen.ouc.edu.cn/Article/Class3/xwlb/2018/01/22/82384.html',  # 中国海洋大学新闻网
-    'http://news.sjtu.edu.cn/info/1002/1645201.htm',  # 上海交通大学新闻网]
-
-    >>> for url in urls:
-    >>> t = TEDT(url, LOG_LEVEL='INFO',)
-    >>> t.ie()
-'''
-    >>> print(t.corpus)
-    为深入学习贯彻落实党的十九大精神，深入推动习近平新时代中国特色社会主义思想进教材进课堂进头脑，不断提高思政课建设的质量和水平...
-
-    >>> print(t.title)
-    高校思想政治理论课实地教学观摩在上海交大举行[图]
-	
-	>>> print(t.time)
-    2018-01-18
-'''
-3. 运行结果
---------
+    'http://news.sjtu.edu.cn/info/1002/1645201.htm',  # 上海交通大学新闻网
+]
+- for url in urls:
+-     t = TEDT(url, LOG_LEVEL='INFO',)
+-     t.ie()
 
 - INFO:------------------------------TEDT------------------------------
 - INFO:标题：【港媒称人工智能改变内地人生活：神奇老师深受小学生喜爱】
