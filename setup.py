@@ -44,7 +44,7 @@ with codecs.open('README.rst', 'r', 'utf-8') as f:
 
 setup(
     name='TEDT',
-    version='0.2',
+    version='0.3',
     description='News Title Extraction Algorithm Based on Density and Text Features',
     long_description=readme,
     author='ZhenSheng Peng',
@@ -60,4 +60,5 @@ setup(
         'Natural Language :: English',
         'Intended Audience :: Developers',
     ],
+    package_data={'': ['requires.txt']},
 )

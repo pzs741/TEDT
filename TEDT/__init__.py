@@ -10,6 +10,6 @@ __copyright__ = 'Copyright 2018, Ex_treme'
 from .information_extraction import TEDT,fake_title_cut
 from .release_time import TimeExtractor
 
-version = '0.2'
+version = '0.3'
 
 
