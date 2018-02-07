@@ -34,7 +34,7 @@ if sys.version_info[0] == 2 and sys.argv[-1] not in ['publish', 'upload']:
              '`$ pip install TEDT` for python2')
 
 
-with open('requirements.txt') as f:
+with open('requires.txt') as f:
     required = f.read().splitlines()
 
 
