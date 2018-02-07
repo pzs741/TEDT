@@ -41,7 +41,7 @@ with codecs.open('README.rst', 'r', 'utf-8') as f:
 
 setup(
     name='TEDT',
-    version='0.3',
+    version='0.4',
     description='News Title Extraction Algorithm Based on Density and Text Features',
     long_description=readme,
     author='ZhenSheng Peng',
@@ -49,7 +49,7 @@ setup(
     url='https://github.com/pzs741/TEDT',
     packages=packages,
     include_package_data=True,
-    install_requires=['jieba >= 0.35', 'numpy >= 1.7.1', 'networkx >= 1.9.1'],
+    install_requires=['jieba >= 0.35', 'numpy >= 1.7.1', 'networkx >= 1.9.1','requests >=2.14.2'],
     license='MIT',
     zip_safe=False,
     classifiers=[
