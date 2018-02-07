@@ -72,8 +72,11 @@ TEDT：基于密度及文本特征的新闻标题抽取算法
     'http://xinwen.ouc.edu.cn/Article/Class3/xwlb/2018/01/22/82384.html',  # 中国海洋大学新闻网
     'http://news.sjtu.edu.cn/info/1002/1645201.htm',  # 上海交通大学新闻网
 ]
+
 - for url in urls:
+
 - t = TEDT(url, LOG_LEVEL='INFO',)
+
 - t.ie()
 
 - INFO:------------------------------TEDT------------------------------
